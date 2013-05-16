@@ -1,0 +1,24 @@
+<template name = 'comment'>
+	<div class ='comment'>
+		<span class = 'commented-by'>
+			<a href ="#" title>***REMOVED******REMOVED***commentor_name***REMOVED******REMOVED***</a>
+		</span>
+		***REMOVED******REMOVED***#if editing***REMOVED******REMOVED***
+			<input type="text" class="edit-comment-input" value="***REMOVED******REMOVED***text***REMOVED******REMOVED***"></input>
+		***REMOVED******REMOVED***else***REMOVED******REMOVED***
+			***REMOVED******REMOVED***text***REMOVED******REMOVED***
+		***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+		***REMOVED******REMOVED***#if isMine***REMOVED******REMOVED***
+		<span class = 'comment-actions'>
+			<a href="#" class ='edit-comment comment-action'>
+				<i class='icon-pencil'></i>
+				Edit
+			</a>
+			<a href = "#" class ='delete-comment comment-action'>
+				<i class = 'icon-trash'></i>
+				Delete
+			</a>
+		</span>
+		***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+	</div>
+</template>

@@ -1,0 +1,73 @@
+<template name='link_item'>
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<div class = "row accordion-row">
+				<a class="accordion-toggle span4 link-title-text" data-toggle="collapse" data-parent="#link-list" href="#collapse***REMOVED******REMOVED***index***REMOVED******REMOVED***">
+					***REMOVED******REMOVED***title***REMOVED******REMOVED***
+				</a>
+				***REMOVED******REMOVED***#if has_readers***REMOVED******REMOVED***
+					<div class="progress progress-stripe span3 link-progress">
+						<div class="bar user-bar" style="width: ***REMOVED******REMOVED***read_percentage***REMOVED******REMOVED***;">***REMOVED******REMOVED***percentage_text***REMOVED******REMOVED***</div>
+					</div>
+				***REMOVED******REMOVED***else***REMOVED******REMOVED***
+					<p class = "span3 link-header"> No readers yet </p>
+				***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+				
+				<span class ="span3 read-type">
+					***REMOVED******REMOVED***#if read_by_me***REMOVED******REMOVED***
+						<span class="badge badge-success">read</span>
+					***REMOVED******REMOVED***else***REMOVED******REMOVED***
+						***REMOVED******REMOVED***#if created_by_me***REMOVED******REMOVED***
+							<span class="label">posted by me</span>
+						***REMOVED******REMOVED***else***REMOVED******REMOVED***
+							<span class="badge badge-info">unread</span>
+						***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+							
+					***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+				</span>
+				
+			</div>
+		</div>    
+		<div id="collapse***REMOVED******REMOVED***index***REMOVED******REMOVED***" class="accordion-body collapse" style="height: 0px;">
+			<div class="accordion-inner link-accordion">
+					<span class = "row-fluid span8 description-box">
+						<h5 class='description-header'><span><i class='icon-book icon-white description-icon'></i>Description</span></h5>
+						<a href=***REMOVED******REMOVED***url***REMOVED******REMOVED*** target="_blank" class='link-description'>***REMOVED******REMOVED***description***REMOVED******REMOVED***</a>
+						<span class = 'link-actions'>
+							***REMOVED******REMOVED***#unless read_by_me***REMOVED******REMOVED*** 
+								***REMOVED******REMOVED***#unless created_by_me***REMOVED******REMOVED***
+									<button type="button" class="btn btn-mini btn-success mark-read-btn"><i class='icon-eye-open'></i> Mark Read</button>
+								***REMOVED******REMOVED***/unless***REMOVED******REMOVED***
+							***REMOVED******REMOVED***/unless***REMOVED******REMOVED***
+							***REMOVED******REMOVED***#if created_by_me***REMOVED******REMOVED***
+								
+								<button type="button" class="btn btn-mini btn-danger delete-btn"><i class='icon-trash'></i> Delete</button>
+							***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+						</span>
+					</span>
+					<div class = "span6">
+						<div class = 'comment-box'>
+							<h5 class ='comment-header'>
+								<i class="icon-comment icon-white"></i>
+								Comments			
+							</h5>
+							
+							<div class = 'comment-box-body'>
+								***REMOVED******REMOVED***#each getComments***REMOVED******REMOVED***
+									***REMOVED******REMOVED***> comment***REMOVED******REMOVED***
+								***REMOVED******REMOVED***/each***REMOVED******REMOVED***
+								<div class ='comment'>
+									<input type="text" data-link=***REMOVED******REMOVED***_id***REMOVED******REMOVED*** data-link-creator=***REMOVED******REMOVED***creator***REMOVED******REMOVED*** class="input add-comment" placeholder="Add comment.."></input>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>				
+			</div>
+			</div>
+		</div>
+	</div>
+</template>
