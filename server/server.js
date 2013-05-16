@@ -3,6 +3,18 @@ var path = Npm.require('path');
 var Future = Npm.require(path.join('fibers', 'future'));
 
 Meteor.startup(function () {
+	var localMode = true;
+	if(localMode) {
+		// first, remove configuration entry in case service is already configured
+		Accounts.loginServiceConfiguration.remove({
+		  service: "facebook"
+		});
+		Accounts.loginServiceConfiguration.insert({
+		  service: "160321274139054",
+		  clientId: "1292962797",
+		  secret: "e4f4fddcc44725d67eb1e6d4a256de01"
+		});  
+	}
   Points.aggregate = function(pipeline) {
     var self = this;
     
