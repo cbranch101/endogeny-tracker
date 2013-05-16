@@ -1,0 +1,18 @@
+<template name = 'status_list'>
+	<div class = "container-fluid">
+		<div class = 'row-fluid friend-side-bar'>
+			<div class ='span2'>
+				<h5>
+					Status
+				</h5>
+				<div class = 'friend-box'>
+					{{#each getPointsByUser}}
+						{{> status_item}}
+					{{/each}}
+				</div>
+			</div>
+			<div class ='span10'>
+			</div>
+		</div>
+	</div>
+</template>

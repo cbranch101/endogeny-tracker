@@ -1,0 +1,10 @@
+<template name = "inspire_content">
+	<div class = 'container-fluid'>
+		{{#if showCreateLinkDialog}}
+			{{> create_link_dialog}}
+		{{/if}}
+		<button class="btn btn-primary" id= 'add-btn' type="button"><i class='icon-plus'></i> Add Link</button>
+		{{> link_list}}
+	</div>
+	
+</template>

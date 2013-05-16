@@ -1,0 +1,133 @@
+/* CSS declarations go here */
+
+.login-center{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+
+.link-progress {
+	margin-top : 10px;
+	margin-bottom: 10px;
+	margin-left : 0px;
+	background-color: #222222;
+    border: 1px solid #e5e5e5;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.user-bar {
+	float: right;
+}
+
+.progress-wrapper {
+}
+
+.read-type {
+	margin-top : 10px;
+	margin-bottom: 10px;
+	float: right;
+}
+
+.link-header {
+	margin-top : 10px;
+	margin-bottom: 10px;
+}
+
+
+
+#add-btn {
+	margin-bottom: 10px;
+}
+
+.read-btn {
+}
+
+.delete-btn {
+}
+
+.commented-by {
+	display: block;
+}
+
+.comment-actions {
+	display: block;
+}
+
+.comment-action{
+	margin-right: 7px;
+}
+
+.comment-header {
+	margin-top : 0px;
+}
+
+.comment-box {
+	margin-top : 10px;
+}
+
+.comment {
+	padding-top : 20px;
+	padding-bottom : 20px;
+	padding-left : 20px;
+	padding-right : 20px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.comment-box-body {
+	border-top-left-radius : 5px;
+	border-top-right-radius : 5px;
+	border-bottom-left-radius : 5px;
+	border-bottom-right-radius : 5px;
+	border-style : solid;
+	border-width : 1px;
+	margin-bottom: 20px;
+	
+}
+
+.description-header {
+	margin-bottom : 10px;
+}
+
+.description-icon {
+	margin-right : 5px;
+}
+
+.link-description {
+	display : block;
+}
+
+.link-actions {
+	display : block;
+	margin-top : 10px;
+}
+
+.link-accordion {
+	padding-bottom : 10px;
+}
+
+.description-box {
+	margin-bottom: 10px;
+	
+}
+
+.comment-btn {
+	margin-left : 20px;
+	margin-bottom : 10px;
+}
+
+.friend-item {
+	display : block;
+}
+
+.friend-item-name {
+	margin-right: 20px;
+}
+
+
+
+
+
+

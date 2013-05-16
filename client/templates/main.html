@@ -1,0 +1,7 @@
+<template name = "main">
+	{{#if isLoggedIn}}
+		{{> dashboard}}
+	{{else}}
+		{{> not_logged_in}}
+	{{/if}}
+</template>
