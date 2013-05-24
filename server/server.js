@@ -59,7 +59,7 @@ Meteor.methods(***REMOVED***
 ***REMOVED***);
 
 Meteor.publish("links", function() ***REMOVED***
-	return Links.find();
+	return Links.find(***REMOVED******REMOVED***);
 ***REMOVED***);
 
 Meteor.publish("users", function() ***REMOVED***
@@ -68,4 +68,8 @@ Meteor.publish("users", function() ***REMOVED***
 
 Meteor.publish("comments", function() ***REMOVED***
 	return Comments.find();
+***REMOVED***);
+
+Meteor.publish("answers", function() ***REMOVED***
+	return Answers.find();
 ***REMOVED***);

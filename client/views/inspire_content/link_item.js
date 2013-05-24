@@ -23,7 +23,6 @@
 					link_creator : linkCreator
 				***REMOVED***;
 				Meteor.call('createComment', options);
-				setPointsByUser();
 				event.target.value = "";
 			***REMOVED***
 			if(event.which == 27) ***REMOVED***

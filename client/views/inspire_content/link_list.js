@@ -11,7 +11,7 @@
 	***REMOVED***
 	
 	Template.link_list.getLinks = function() ***REMOVED***
-		var links = Links.find();
+		var links = Links.find(***REMOVED******REMOVED***,***REMOVED***$sort : ***REMOVED***createTime : 1***REMOVED******REMOVED***);
 		
 		if(links.count() > 0) ***REMOVED***
 			index = 0;

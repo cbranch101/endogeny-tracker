@@ -9,6 +9,11 @@
 			button_name : 'Inspire',
 		***REMOVED***,
 		
+		***REMOVED***
+			id : 'marinate',
+			button_name : 'Marinate',
+		***REMOVED***,
+		
 	];
 	
 	setCurrentContentTypes = function() ***REMOVED***

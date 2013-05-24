@@ -8,6 +8,8 @@
 	***REMOVED***);
 	
 	Meteor.subscribe("comments");
+	
+	Meteor.subscribe("answers");
 					
 	Meteor.startup(function () ***REMOVED***
 		// if the current content for the dashboard is null
@@ -16,7 +18,6 @@
 	   		Session.set('current_content', 'home');
 		***REMOVED***
 		setCurrentContentTypes();
-		setPointsByUser();
 		
 		
 	***REMOVED***);

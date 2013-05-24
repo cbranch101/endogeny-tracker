@@ -6,3 +6,7 @@
 	Template.content.showHomeContent = function() ***REMOVED***
 		return Session.get('current_content') == 'home';
 	***REMOVED***
+	
+	Template.content.showMarinateContent = function() ***REMOVED***
+		return Session.get('current_content') == 'marinate';
+	***REMOVED***

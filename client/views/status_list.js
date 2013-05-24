@@ -1,5 +1,5 @@
 	Template.status_list.getPointsByUser = function() ***REMOVED***
 		
-		return Session.get('points_by_user');
+		return Meteor.users.find(***REMOVED******REMOVED***);
 		
 	***REMOVED***
