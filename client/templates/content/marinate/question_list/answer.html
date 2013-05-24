@@ -1,0 +1,24 @@
+<template name = 'answer'>
+	<div class ='comment answer'>
+		<span class = 'commented-by answered-by'>
+			<a href ="#" title>{{answered_by_name}}</a>
+		</span>
+		{{#if editing}}
+			<input type="text" class="edit-comment-input edit-answer-input" value="{{text}}"></input>
+		{{else}}
+			{{text}}
+		{{/if}}
+		{{#if isMine}}
+		<span class = 'comment-actions'>
+			<a href="#" class ='edit-comment edit-answer comment-action'>
+				<i class='icon-pencil'></i>
+				Edit
+			</a>
+			<a href = "#" class ='delete-comment delete-answer comment-action'>
+				<i class = 'icon-trash'></i>
+				Delete
+			</a>
+		</span>
+		{{/if}}
+	</div>
+</template>

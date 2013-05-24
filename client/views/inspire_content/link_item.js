@@ -23,7 +23,6 @@
 					link_creator : linkCreator
 				};
 				Meteor.call('createComment', options);
-				setPointsByUser();
 				event.target.value = "";
 			}
 			if(event.which == 27) {

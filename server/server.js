@@ -59,7 +59,7 @@ Meteor.methods({
 });
 
 Meteor.publish("links", function() {
-	return Links.find();
+	return Links.find({});
 });
 
 Meteor.publish("users", function() {
@@ -68,4 +68,8 @@ Meteor.publish("users", function() {
 
 Meteor.publish("comments", function() {
 	return Comments.find();
+});
+
+Meteor.publish("answers", function() {
+	return Answers.find();
 });

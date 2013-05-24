@@ -11,7 +11,7 @@
 	}
 	
 	Template.link_list.getLinks = function() {
-		var links = Links.find();
+		var links = Links.find({},{$sort : {createTime : 1}});
 		
 		if(links.count() > 0) {
 			index = 0;

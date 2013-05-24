@@ -1,0 +1,169 @@
+
+
+
+$linkListViewDetails = {
+	type : 'nested_list_with_comments';
+	input : {
+		model : 'links',
+		template : 'link_list',
+	},
+};
+
+$viewBlueprint = $viewBuilder.build($linkListViewDetails);
+
+var $viewBuilder = {
+	build : function(specificType, input) {
+		specificViewDetails = specificView[specificType];
+		baseViewDetails = baseViewMap[viewDetails.baseViewType];
+		
+		
+		
+		
+	},
+	
+	
+	getTemplateFunctions(template, baseViewDetails, specificViewDetails) {
+		map(baseViewDetails)
+	}
+	setTemplateFunctions : function(viewType, template, templateFunctions) {
+				
+		// iterate over the template functions and set them in the template
+	},
+	
+	
+	// The general idea is that the specific view will be responsible for getting the params that will be used the construct the template function
+	baseViewMap : {
+		list : {
+			templateFunctions [
+				'getRows' => function($input) {
+					
+					$listModel = $input['list_model'];
+					$query = $input['query'];
+					$processRow = $input['processRow'];
+					return function() {
+						// call the readData method in the specified model and pass in the supplied query
+						// get back the results
+						// if there are any results
+							// iterate over them and call process row 
+						// return the result
+					}
+				},
+				'showCreateModal', => function($input) {
+					if($input['hasCreateModal'] {
+						return function() {
+							// get the session variable that is the model name + _create_modal_is_shown;
+						}
+					}
+				},
+			],
+			events [
+				'create' => array(
+					'type' => 'click',
+					'function' => function($input) {
+						
+					}
+				),
+				'sort',
+				'page'
+				'filter',
+			],
+		},
+		row : {
+			templateFunctions [
+				'getHeader',
+				'getBody',
+			],
+			events [
+				
+			],
+		},
+	},
+	specificViewMap : {
+		simpleList {
+			baseType : list,
+			input : {
+				hasCreateModal : true,
+				listModel : links,
+			},
+			'modelFunctions' => array(
+				'links' => array(
+					'create',
+					'read',
+				),
+				'points' => array(
+					'create',
+				),
+			),
+			
+		},
+	},
+	templateMap : {
+		link_list : {
+			specificViewType : simpleList,
+			validate : {
+				
+			},
+			
+			
+			
+			
+		},
+	},
+	
+var	$modelBuilder = {
+	modelMap = {
+		links : {
+			methods : {
+				create : {},
+				read : {
+					query : {
+						
+					},
+				},
+				update : {
+					query : {
+						
+					},
+				},
+			},
+			allow : {
+				
+			},
+		},
+		points : {
+			methods : {
+				create : {},
+				read : {
+					getQuery : function($params) {
+						// convert the params into a query!
+					},
+				},
+				
+			},
+			allow : {
+				
+			},
+		},
+	},
+	methodMap : {
+		create : function($model, $methodDetails) {
+			return function($objectToCreate) {
+				Meteor[$model].insert($objectToCreate);	
+			},
+		},
+		read : function($model, $methodDetails) {
+			
+			return function($readParams) {
+				query = $methodDetais['getQuery']($readParams);
+				result = Meteor[$model].find($query);
+				return result;
+			};
+			
+		},
+		getPointsByDay : {
+			return function()
+		},
+	},
+}
+	
+};

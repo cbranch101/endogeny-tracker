@@ -9,6 +9,11 @@
 			button_name : 'Inspire',
 		},
 		
+		{
+			id : 'marinate',
+			button_name : 'Marinate',
+		},
+		
 	];
 	
 	setCurrentContentTypes = function() {

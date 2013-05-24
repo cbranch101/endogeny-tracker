@@ -2,7 +2,7 @@
 	<div class="accordion-group">
 		<div class="accordion-heading">
 			<div class = "row accordion-row">
-				<a class="accordion-toggle span4 link-title-text" data-toggle="collapse" data-parent="#link-list" href="#collapse{{index}}">
+				<a class="accordion-toggle span4 accordion-title-text" data-toggle="collapse" data-parent="#link-list" href="#collapse{{index}}">
 					{{title}}
 				</a>
 				{{#if has_readers}}
@@ -10,7 +10,7 @@
 						<div class="bar user-bar" style="width: {{read_percentage}};">{{percentage_text}}</div>
 					</div>
 				{{else}}
-					<p class = "span3 link-header"> No readers yet </p>
+					<p class = "span3 accordion-header"> No readers yet </p>
 				{{/if}}
 				
 				<span class ="span3 read-type">
@@ -32,7 +32,7 @@
 			<div class="accordion-inner link-accordion">
 					<span class = "row-fluid span8 description-box">
 						<h5 class='description-header'><span><i class='icon-book icon-white description-icon'></i>Description</span></h5>
-						<a href={{url}} target="_blank" class='link-description'>{{description}}</a>
+						<a href={{url}} target="_blank" class='description-body link-description'>{{description}}</a>
 						<span class = 'link-actions'>
 							{{#unless read_by_me}} 
 								{{#unless created_by_me}}

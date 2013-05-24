@@ -30,7 +30,7 @@
 	float: right;
 }
 
-.link-header {
+.accoridon-header {
 	margin-top : 10px;
 	margin-bottom: 10px;
 }
@@ -95,7 +95,7 @@
 	margin-right : 5px;
 }
 
-.link-description {
+.description-body {
 	display : block;
 }
 
