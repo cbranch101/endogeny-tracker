@@ -7,9 +7,9 @@
     </div>
 
     <div class="modal-body">
-      ***REMOVED******REMOVED***#if error***REMOVED******REMOVED***
-        <div class="alert alert-error">***REMOVED******REMOVED***error***REMOVED******REMOVED***</div>
-      ***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+      {{#if error}}
+        <div class="alert alert-error">{{error}}</div>
+      {{/if}}
 
       <label>Title</label>
       <input type="text" class="title span5">

@@ -1,74 +1,74 @@
 
 
 
-$linkListViewDetails = ***REMOVED***
+$linkListViewDetails = {
 	type : 'nested_list_with_comments';
-	input : ***REMOVED***
+	input : {
 		model : 'links',
 		template : 'link_list',
-	***REMOVED***,
-***REMOVED***;
+	},
+};
 
 $viewBlueprint = $viewBuilder.build($linkListViewDetails);
 
-var $viewBuilder = ***REMOVED***
-	build : function(specificType, input) ***REMOVED***
+var $viewBuilder = {
+	build : function(specificType, input) {
 		specificViewDetails = specificView[specificType];
 		baseViewDetails = baseViewMap[viewDetails.baseViewType];
 		
 		
 		
 		
-	***REMOVED***,
+	},
 	
 	
-	getTemplateFunctions(template, baseViewDetails, specificViewDetails) ***REMOVED***
+	getTemplateFunctions(template, baseViewDetails, specificViewDetails) {
 		map(baseViewDetails)
-	***REMOVED***
-	setTemplateFunctions : function(viewType, template, templateFunctions) ***REMOVED***
+	}
+	setTemplateFunctions : function(viewType, template, templateFunctions) {
 				
 		// iterate over the template functions and set them in the template
-	***REMOVED***,
+	},
 	
 	
 	// The general idea is that the specific view will be responsible for getting the params that will be used the construct the template function
-	baseViewMap : ***REMOVED***
-		list : ***REMOVED***
+	baseViewMap : {
+		list : {
 			templateFunctions [
-				'getRows' => function($input) ***REMOVED***
+				'getRows' => function($input) {
 					
 					$listModel = $input['list_model'];
 					$query = $input['query'];
 					$processRow = $input['processRow'];
-					return function() ***REMOVED***
+					return function() {
 						// call the readData method in the specified model and pass in the supplied query
 						// get back the results
 						// if there are any results
 							// iterate over them and call process row 
 						// return the result
-					***REMOVED***
-				***REMOVED***,
-				'showCreateModal', => function($input) ***REMOVED***
-					if($input['hasCreateModal'] ***REMOVED***
-						return function() ***REMOVED***
+					}
+				},
+				'showCreateModal', => function($input) {
+					if($input['hasCreateModal'] {
+						return function() {
 							// get the session variable that is the model name + _create_modal_is_shown;
-						***REMOVED***
-					***REMOVED***
-				***REMOVED***,
+						}
+					}
+				},
 			],
 			events [
 				'create' => array(
 					'type' => 'click',
-					'function' => function($input) ***REMOVED***
+					'function' => function($input) {
 						
-					***REMOVED***
+					}
 				),
 				'sort',
 				'page'
 				'filter',
 			],
-		***REMOVED***,
-		row : ***REMOVED***
+		},
+		row : {
 			templateFunctions [
 				'getHeader',
 				'getBody',
@@ -76,15 +76,15 @@ var $viewBuilder = ***REMOVED***
 			events [
 				
 			],
-		***REMOVED***,
-	***REMOVED***,
-	specificViewMap : ***REMOVED***
-		simpleList ***REMOVED***
+		},
+	},
+	specificViewMap : {
+		simpleList {
 			baseType : list,
-			input : ***REMOVED***
+			input : {
 				hasCreateModal : true,
 				listModel : links,
-			***REMOVED***,
+			},
 			'modelFunctions' => array(
 				'links' => array(
 					'create',
@@ -95,75 +95,75 @@ var $viewBuilder = ***REMOVED***
 				),
 			),
 			
-		***REMOVED***,
-	***REMOVED***,
-	templateMap : ***REMOVED***
-		link_list : ***REMOVED***
+		},
+	},
+	templateMap : {
+		link_list : {
 			specificViewType : simpleList,
-			validate : ***REMOVED***
+			validate : {
 				
-			***REMOVED***,
+			},
 			
 			
 			
 			
-		***REMOVED***,
-	***REMOVED***,
+		},
+	},
 	
-var	$modelBuilder = ***REMOVED***
-	modelMap = ***REMOVED***
-		links : ***REMOVED***
-			methods : ***REMOVED***
-				create : ***REMOVED******REMOVED***,
-				read : ***REMOVED***
-					query : ***REMOVED***
+var	$modelBuilder = {
+	modelMap = {
+		links : {
+			methods : {
+				create : {},
+				read : {
+					query : {
 						
-					***REMOVED***,
-				***REMOVED***,
-				update : ***REMOVED***
-					query : ***REMOVED***
+					},
+				},
+				update : {
+					query : {
 						
-					***REMOVED***,
-				***REMOVED***,
-			***REMOVED***,
-			allow : ***REMOVED***
+					},
+				},
+			},
+			allow : {
 				
-			***REMOVED***,
-		***REMOVED***,
-		points : ***REMOVED***
-			methods : ***REMOVED***
-				create : ***REMOVED******REMOVED***,
-				read : ***REMOVED***
-					getQuery : function($params) ***REMOVED***
+			},
+		},
+		points : {
+			methods : {
+				create : {},
+				read : {
+					getQuery : function($params) {
 						// convert the params into a query!
-					***REMOVED***,
-				***REMOVED***,
+					},
+				},
 				
-			***REMOVED***,
-			allow : ***REMOVED***
+			},
+			allow : {
 				
-			***REMOVED***,
-		***REMOVED***,
-	***REMOVED***,
-	methodMap : ***REMOVED***
-		create : function($model, $methodDetails) ***REMOVED***
-			return function($objectToCreate) ***REMOVED***
+			},
+		},
+	},
+	methodMap : {
+		create : function($model, $methodDetails) {
+			return function($objectToCreate) {
 				Meteor[$model].insert($objectToCreate);	
-			***REMOVED***,
-		***REMOVED***,
-		read : function($model, $methodDetails) ***REMOVED***
+			},
+		},
+		read : function($model, $methodDetails) {
 			
-			return function($readParams) ***REMOVED***
+			return function($readParams) {
 				query = $methodDetais['getQuery']($readParams);
 				result = Meteor[$model].find($query);
 				return result;
-			***REMOVED***;
+			};
 			
-		***REMOVED***,
-		getPointsByDay : ***REMOVED***
+		},
+		getPointsByDay : {
 			return function()
-		***REMOVED***,
-	***REMOVED***,
-***REMOVED***
+		},
+	},
+}
 	
-***REMOVED***;
+};

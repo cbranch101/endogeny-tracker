@@ -2,47 +2,47 @@
 	<div class="accordion-group">
 		<div class="accordion-heading">
 			<div class = "row accordion-row">
-				<a class="accordion-toggle span4 accordion-title-text" data-toggle="collapse" data-parent="#link-list" href="#collapse***REMOVED******REMOVED***index***REMOVED******REMOVED***">
-					***REMOVED******REMOVED***title***REMOVED******REMOVED***
+				<a class="accordion-toggle span4 accordion-title-text" data-toggle="collapse" data-parent="#link-list" href="#collapse{{index}}">
+					{{title}}
 				</a>
-				***REMOVED******REMOVED***#if has_readers***REMOVED******REMOVED***
+				{{#if has_readers}}
 					<div class="progress progress-stripe span3 link-progress">
-						<div class="bar user-bar" style="width: ***REMOVED******REMOVED***read_percentage***REMOVED******REMOVED***;">***REMOVED******REMOVED***percentage_text***REMOVED******REMOVED***</div>
+						<div class="bar user-bar" style="width: {{read_percentage}};">{{percentage_text}}</div>
 					</div>
-				***REMOVED******REMOVED***else***REMOVED******REMOVED***
+				{{else}}
 					<p class = "span3 accordion-header"> No readers yet </p>
-				***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+				{{/if}}
 				
 				<span class ="span3 read-type">
-					***REMOVED******REMOVED***#if read_by_me***REMOVED******REMOVED***
+					{{#if read_by_me}}
 						<span class="badge badge-success">read</span>
-					***REMOVED******REMOVED***else***REMOVED******REMOVED***
-						***REMOVED******REMOVED***#if created_by_me***REMOVED******REMOVED***
+					{{else}}
+						{{#if created_by_me}}
 							<span class="label">posted by me</span>
-						***REMOVED******REMOVED***else***REMOVED******REMOVED***
+						{{else}}
 							<span class="badge badge-info">unread</span>
-						***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+						{{/if}}
 							
-					***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+					{{/if}}
 				</span>
 				
 			</div>
 		</div>    
-		<div id="collapse***REMOVED******REMOVED***index***REMOVED******REMOVED***" class="accordion-body collapse" style="height: 0px;">
+		<div id="collapse{{index}}" class="accordion-body collapse" style="height: 0px;">
 			<div class="accordion-inner link-accordion">
 					<span class = "row-fluid span8 description-box">
 						<h5 class='description-header'><span><i class='icon-book icon-white description-icon'></i>Description</span></h5>
-						<a href=***REMOVED******REMOVED***url***REMOVED******REMOVED*** target="_blank" class='description-body link-description'>***REMOVED******REMOVED***description***REMOVED******REMOVED***</a>
+						<a href={{url}} target="_blank" class='description-body link-description'>{{description}}</a>
 						<span class = 'link-actions'>
-							***REMOVED******REMOVED***#unless read_by_me***REMOVED******REMOVED*** 
-								***REMOVED******REMOVED***#unless created_by_me***REMOVED******REMOVED***
+							{{#unless read_by_me}} 
+								{{#unless created_by_me}}
 									<button type="button" class="btn btn-mini btn-success mark-read-btn"><i class='icon-eye-open'></i> Mark Read</button>
-								***REMOVED******REMOVED***/unless***REMOVED******REMOVED***
-							***REMOVED******REMOVED***/unless***REMOVED******REMOVED***
-							***REMOVED******REMOVED***#if created_by_me***REMOVED******REMOVED***
+								{{/unless}}
+							{{/unless}}
+							{{#if created_by_me}}
 								
 								<button type="button" class="btn btn-mini btn-danger delete-btn"><i class='icon-trash'></i> Delete</button>
-							***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+							{{/if}}
 						</span>
 					</span>
 					<div class = "span6">
@@ -53,11 +53,11 @@
 							</h5>
 							
 							<div class = 'comment-box-body'>
-								***REMOVED******REMOVED***#each getComments***REMOVED******REMOVED***
-									***REMOVED******REMOVED***> comment***REMOVED******REMOVED***
-								***REMOVED******REMOVED***/each***REMOVED******REMOVED***
+								{{#each getComments}}
+									{{> comment}}
+								{{/each}}
 								<div class ='comment'>
-									<input type="text" data-link=***REMOVED******REMOVED***_id***REMOVED******REMOVED*** data-link-creator=***REMOVED******REMOVED***creator***REMOVED******REMOVED*** class="input add-comment" placeholder="Add comment.."></input>
+									<input type="text" data-link={{_id}} data-link-creator={{creator}} class="input add-comment" placeholder="Add comment.."></input>
 								</div>
 							</div>
 							

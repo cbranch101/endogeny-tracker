@@ -1,14 +1,14 @@
 <template name = 'comment'>
 	<div class ='comment'>
 		<span class = 'commented-by'>
-			<a href ="#" title>***REMOVED******REMOVED***commentor_name***REMOVED******REMOVED***</a>
+			<a href ="#" title>{{commentor_name}}</a>
 		</span>
-		***REMOVED******REMOVED***#if editing***REMOVED******REMOVED***
-			<input type="text" class="edit-comment-input" value="***REMOVED******REMOVED***text***REMOVED******REMOVED***"></input>
-		***REMOVED******REMOVED***else***REMOVED******REMOVED***
-			***REMOVED******REMOVED***text***REMOVED******REMOVED***
-		***REMOVED******REMOVED***/if***REMOVED******REMOVED***
-		***REMOVED******REMOVED***#if isMine***REMOVED******REMOVED***
+		{{#if editing}}
+			<input type="text" class="edit-comment-input" value="{{text}}"></input>
+		{{else}}
+			{{text}}
+		{{/if}}
+		{{#if isMine}}
 		<span class = 'comment-actions'>
 			<a href="#" class ='edit-comment comment-action'>
 				<i class='icon-pencil'></i>
@@ -19,6 +19,6 @@
 				Delete
 			</a>
 		</span>
-		***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+		{{/if}}
 	</div>
 </template>

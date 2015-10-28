@@ -1,33 +1,33 @@
 	contentTypes = [
 		
-		***REMOVED***
+		{
 			id : 'home',
 			button_name : 'Home',
-		***REMOVED***,
-		***REMOVED***
+		},
+		{
 			id : 'inspire',
 			button_name : 'Inspire',
-		***REMOVED***,
+		},
 		
-		***REMOVED***
+		{
 			id : 'marinate',
 			button_name : 'Marinate',
-		***REMOVED***,
+		},
 		
 	];
 	
-	setCurrentContentTypes = function() ***REMOVED***
+	setCurrentContentTypes = function() {
 		
-		var isActive = function(contentType) ***REMOVED***
+		var isActive = function(contentType) {
 			return Session.get('current_content') == contentType;
-		***REMOVED***
+		}
 		
-		currentContentTypes = _.map(contentTypes, function(contentType)***REMOVED***
+		currentContentTypes = _.map(contentTypes, function(contentType){
 			var listClass = isActive(contentType['id']) ? "class = active" : '';
 			contentType['list_class'] = listClass;
 			return contentType;
-		***REMOVED***);
+		});
 				
 		Session.set('current_content_types', currentContentTypes);
 		
-	***REMOVED***
+	}

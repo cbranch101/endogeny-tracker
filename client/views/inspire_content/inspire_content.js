@@ -1,10 +1,10 @@
 	
-	Template.inspire_content.events(***REMOVED***
-		'click #add-btn' : function() ***REMOVED***
+	Template.inspire_content.events({
+		'click #add-btn' : function() {
 			Session.set('showCreateLinkDialog' , true);
-		***REMOVED*** 
-	***REMOVED***);
+		} 
+	});
 	
-	Template.inspire_content.showCreateLinkDialog = function() ***REMOVED***
+	Template.inspire_content.showCreateLinkDialog = function() {
 		return Session.get('showCreateLinkDialog');
-	***REMOVED***
+	}

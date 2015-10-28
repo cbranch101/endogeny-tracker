@@ -2,74 +2,74 @@
 var path = Npm.require('path');
 var Future = Npm.require(path.join('fibers', 'future'));
 
-Meteor.startup(function () ***REMOVED***
+Meteor.startup(function () {
 	var localMode = true;
-	if(localMode) ***REMOVED***
+	if(localMode) {
 		// first, remove configuration entry in case service is already configured
-		Accounts.loginServiceConfiguration.remove(***REMOVED***
+		Accounts.loginServiceConfiguration.remove({
 		  service: "facebook"
-		***REMOVED***);
-		Accounts.loginServiceConfiguration.insert(***REMOVED***
+		});
+		Accounts.loginServiceConfiguration.insert({
 		  service: "160321274139054",
 		  clientId: "1292962797",
 		  secret: "e4f4fddcc44725d67eb1e6d4a256de01"
-		***REMOVED***);  
-	***REMOVED***
-  Points.aggregate = function(pipeline) ***REMOVED***
+		});  
+	}
+  Points.aggregate = function(pipeline) {
     var self = this;
     
     var future = new Future;
-    self.find()._mongo.db.createCollection(self._name, function (err, collection) ***REMOVED***
-      if (err) ***REMOVED***
+    self.find()._mongo.db.createCollection(self._name, function (err, collection) {
+      if (err) {
         future.throw(err);
         return;
-      ***REMOVED***
-      collection.aggregate(pipeline, function(err, result) ***REMOVED***
-        if (err) ***REMOVED***
+      }
+      collection.aggregate(pipeline, function(err, result) {
+        if (err) {
           future.throw(err);
           return;
-        ***REMOVED***
+        }
         future.ret([true, result]);
-      ***REMOVED***);
-    ***REMOVED***);
+      });
+    });
     var result = future.wait();
     if (!result[0])
       throw result[1];
 
     return result[1];
-  ***REMOVED***;
+  };
       
 
-***REMOVED***);
+});
 
-Meteor.methods(***REMOVED***
-	getPointsPerUser : function(options) ***REMOVED***
+Meteor.methods({
+	getPointsPerUser : function(options) {
 		var output = Points.aggregate([
-			***REMOVED***
-				$group : ***REMOVED***
+			{
+				$group : {
 					_id : '$user_id',
-					total_points : ***REMOVED***
+					total_points : {
 						'$sum' : '$count',
-					***REMOVED***,
-				***REMOVED***,
-			***REMOVED***,
+					},
+				},
+			},
 		]);
 		return output;
-	***REMOVED***,
-***REMOVED***);
+	},
+});
 
-Meteor.publish("links", function() ***REMOVED***
-	return Links.find(***REMOVED******REMOVED***);
-***REMOVED***);
+Meteor.publish("links", function() {
+	return Links.find({});
+});
 
-Meteor.publish("users", function() ***REMOVED***
+Meteor.publish("users", function() {
 	return Meteor.users.find();
-***REMOVED***);
+});
 
-Meteor.publish("comments", function() ***REMOVED***
+Meteor.publish("comments", function() {
 	return Comments.find();
-***REMOVED***);
+});
 
-Meteor.publish("answers", function() ***REMOVED***
+Meteor.publish("answers", function() {
 	return Answers.find();
-***REMOVED***);
+});

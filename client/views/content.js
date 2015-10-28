@@ -1,12 +1,12 @@
 	
-	Template.content.showInspireContent = function() ***REMOVED***
+	Template.content.showInspireContent = function() {
 		return Session.get('current_content') == 'inspire';
-	***REMOVED***
+	}
 	
-	Template.content.showHomeContent = function() ***REMOVED***
+	Template.content.showHomeContent = function() {
 		return Session.get('current_content') == 'home';
-	***REMOVED***
+	}
 	
-	Template.content.showMarinateContent = function() ***REMOVED***
+	Template.content.showMarinateContent = function() {
 		return Session.get('current_content') == 'marinate';
-	***REMOVED***
+	}

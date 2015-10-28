@@ -1,3 +1,3 @@
-	Template.main.isLoggedIn = function() ***REMOVED***
+	Template.main.isLoggedIn = function() {
 		return Meteor.userId() != null;	
-	***REMOVED***;
+	};

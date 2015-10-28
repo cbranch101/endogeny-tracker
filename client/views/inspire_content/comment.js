@@ -1,30 +1,30 @@
 	
-	Template.comment.events(***REMOVED***
-		'click .edit-comment' : function(event) ***REMOVED***
+	Template.comment.events({
+		'click .edit-comment' : function(event) {
 			event.preventDefault();
 			Session.set('comment_being_edited', this._id);
-		***REMOVED***,
-		'click .delete-comment' : function(event) ***REMOVED***
+		},
+		'click .delete-comment' : function(event) {
 			event.preventDefault();
 			Comments.remove(this._id);
-		***REMOVED***,
+		},
 
-		'keydown .edit-comment-input' : function(event, template) ***REMOVED***
-			if(event.which == 13) ***REMOVED***
+		'keydown .edit-comment-input' : function(event, template) {
+			if(event.which == 13) {
 				var newText = template.find('.edit-comment-input').value;
-				Comments.update(this._id, ***REMOVED***$set : ***REMOVED***text : newText***REMOVED******REMOVED***);
+				Comments.update(this._id, {$set : {text : newText}});
 				Session.set('comment_being_edited', null);
-			***REMOVED***
-			if(event.which == 27) ***REMOVED***
+			}
+			if(event.which == 27) {
 				Session.set('comment_being_edited', null);
-			***REMOVED***
-		***REMOVED***,
-	***REMOVED***);
+			}
+		},
+	});
 	
-	Template.comment.editing = function() ***REMOVED***
+	Template.comment.editing = function() {
 		return Session.get('comment_being_edited') == this._id;
-	***REMOVED***
+	}
 	
-	Template.comment.isMine = function() ***REMOVED***
+	Template.comment.isMine = function() {
 		return this.commentor == Meteor.userId();
-	***REMOVED***
+	}

@@ -1,10 +1,10 @@
 <template name = "inspire_content">
 	<div class = 'container-fluid'>
-		***REMOVED******REMOVED***#if showCreateLinkDialog***REMOVED******REMOVED***
-			***REMOVED******REMOVED***> create_link_dialog***REMOVED******REMOVED***
-		***REMOVED******REMOVED***/if***REMOVED******REMOVED***
+		{{#if showCreateLinkDialog}}
+			{{> create_link_dialog}}
+		{{/if}}
 		<button class="btn btn-primary" id= 'add-btn' type="button"><i class='icon-plus'></i> Add Link</button>
-		***REMOVED******REMOVED***> link_list***REMOVED******REMOVED***
+		{{> link_list}}
 	</div>
 	
 </template>

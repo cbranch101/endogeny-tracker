@@ -22,11 +22,11 @@
 						</h5>
 						
 						<div class = 'comment-box-body'>
-							***REMOVED******REMOVED***#each getAnswers***REMOVED******REMOVED***
-								***REMOVED******REMOVED***> answer***REMOVED******REMOVED***
-							***REMOVED******REMOVED***/each***REMOVED******REMOVED***
+							{{#each getAnswers}}
+								{{> answer}}
+							{{/each}}
 							<div class ='comment answer'>
-								<input type="text" data-question=***REMOVED******REMOVED***_id***REMOVED******REMOVED*** data-question-creator=***REMOVED******REMOVED***creator***REMOVED******REMOVED*** class="input add-comment add-answer" placeholder="Add Answer.."></input>
+								<input type="text" data-question={{_id}} data-question-creator={{creator}} class="input add-comment add-answer" placeholder="Add Answer.."></input>
 							</div>
 						</div>
 						

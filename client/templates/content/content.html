@@ -1,11 +1,11 @@
 <template name = "content">
-	***REMOVED******REMOVED***#if showInspireContent***REMOVED******REMOVED***
-		***REMOVED******REMOVED***> inspire_content***REMOVED******REMOVED***
-	***REMOVED******REMOVED***/if***REMOVED******REMOVED***	
-	***REMOVED******REMOVED***#if showHomeContent***REMOVED******REMOVED***
-		***REMOVED******REMOVED***> home_content***REMOVED******REMOVED***
-	***REMOVED******REMOVED***/if***REMOVED******REMOVED***
-	***REMOVED******REMOVED***#if showMarinateContent***REMOVED******REMOVED***
-		***REMOVED******REMOVED***> marinate_content***REMOVED******REMOVED***
-	***REMOVED******REMOVED***/if***REMOVED******REMOVED***	
+	{{#if showInspireContent}}
+		{{> inspire_content}}
+	{{/if}}	
+	{{#if showHomeContent}}
+		{{> home_content}}
+	{{/if}}
+	{{#if showMarinateContent}}
+		{{> marinate_content}}
+	{{/if}}	
 </template>

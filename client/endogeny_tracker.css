@@ -1,12 +1,12 @@
 /* CSS declarations go here */
 
-.login-center***REMOVED***
+.login-center{
     width: 100%;
     position: absolute;
     top: 50%;
-***REMOVED***
+}
 
-.link-progress ***REMOVED***
+.link-progress {
 	margin-top : 10px;
 	margin-bottom: 10px;
 	margin-left : 0px;
@@ -14,69 +14,69 @@
     border: 1px solid #e5e5e5;
     display: table-cell;
     vertical-align: middle;
-***REMOVED***
+}
 
 
-.user-bar ***REMOVED***
+.user-bar {
 	float: right;
-***REMOVED***
+}
 
-.progress-wrapper ***REMOVED***
-***REMOVED***
+.progress-wrapper {
+}
 
-.read-type ***REMOVED***
+.read-type {
 	margin-top : 10px;
 	margin-bottom: 10px;
 	float: right;
-***REMOVED***
+}
 
-.accoridon-header ***REMOVED***
+.accoridon-header {
 	margin-top : 10px;
 	margin-bottom: 10px;
-***REMOVED***
+}
 
 
 
-#add-btn ***REMOVED***
+#add-btn {
 	margin-bottom: 10px;
-***REMOVED***
+}
 
-.read-btn ***REMOVED***
-***REMOVED***
+.read-btn {
+}
 
-.delete-btn ***REMOVED***
-***REMOVED***
+.delete-btn {
+}
 
-.commented-by ***REMOVED***
+.commented-by {
 	display: block;
-***REMOVED***
+}
 
-.comment-actions ***REMOVED***
+.comment-actions {
 	display: block;
-***REMOVED***
+}
 
-.comment-action***REMOVED***
+.comment-action{
 	margin-right: 7px;
-***REMOVED***
+}
 
-.comment-header ***REMOVED***
+.comment-header {
 	margin-top : 0px;
-***REMOVED***
+}
 
-.comment-box ***REMOVED***
+.comment-box {
 	margin-top : 10px;
-***REMOVED***
+}
 
-.comment ***REMOVED***
+.comment {
 	padding-top : 20px;
 	padding-bottom : 20px;
 	padding-left : 20px;
 	padding-right : 20px;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
-***REMOVED***
+}
 
-.comment-box-body ***REMOVED***
+.comment-box-body {
 	border-top-left-radius : 5px;
 	border-top-right-radius : 5px;
 	border-bottom-left-radius : 5px;
@@ -85,46 +85,46 @@
 	border-width : 1px;
 	margin-bottom: 20px;
 	
-***REMOVED***
+}
 
-.description-header ***REMOVED***
+.description-header {
 	margin-bottom : 10px;
-***REMOVED***
+}
 
-.description-icon ***REMOVED***
+.description-icon {
 	margin-right : 5px;
-***REMOVED***
+}
 
-.description-body ***REMOVED***
+.description-body {
 	display : block;
-***REMOVED***
+}
 
-.link-actions ***REMOVED***
+.link-actions {
 	display : block;
 	margin-top : 10px;
-***REMOVED***
+}
 
-.link-accordion ***REMOVED***
+.link-accordion {
 	padding-bottom : 10px;
-***REMOVED***
+}
 
-.description-box ***REMOVED***
+.description-box {
 	margin-bottom: 10px;
 	
-***REMOVED***
+}
 
-.comment-btn ***REMOVED***
+.comment-btn {
 	margin-left : 20px;
 	margin-bottom : 10px;
-***REMOVED***
+}
 
-.friend-item ***REMOVED***
+.friend-item {
 	display : block;
-***REMOVED***
+}
 
-.friend-item-name ***REMOVED***
+.friend-item-name {
 	margin-right: 20px;
-***REMOVED***
+}
 
 
 

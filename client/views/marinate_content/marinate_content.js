@@ -1,7 +1,7 @@
 	
-	Template.marinate_content.events(***REMOVED***
+	Template.marinate_content.events({
 		
-	***REMOVED***);
+	});
 	
 	
 	

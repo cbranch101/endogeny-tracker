@@ -1,5 +1,5 @@
-	Meteor.methods(***REMOVED***
-		updatePoints : function(id, points) ***REMOVED***
-			Meteor.users.update(***REMOVED***_id : id***REMOVED***, ***REMOVED***$set : ***REMOVED***total_points : points***REMOVED******REMOVED***);
-		***REMOVED***,
-	***REMOVED***);
+	Meteor.methods({
+		updatePoints : function(id, points) {
+			Meteor.users.update({_id : id}, {$set : {total_points : points}});
+		},
+	});

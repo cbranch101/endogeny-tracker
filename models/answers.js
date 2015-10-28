@@ -1,53 +1,54 @@
 	Answers = new Meteor.Collection("answers");
 	
-	Answers.allow(***REMOVED***
-		insert: function(userId, comment) ***REMOVED***
+	Answers.allow({
+		insert: function(userId, comment) {
 			return false;
-		***REMOVED***,
-		update: function(userId, comment) ***REMOVED***
+		},
+		update: function(userId, comment) {
 			return true;
-		***REMOVED***,
-		remove : function(userId, link) ***REMOVED***
+		},
+		remove : function(userId, link) {
 			return true;
-		***REMOVED***,
-	***REMOVED***);
+		},
+	});
 	
-	Meteor.methods(***REMOVED***
+	
+	Meteor.methods({
 		
-		createAnswer : function(options) ***REMOVED***
-			options = options || ***REMOVED******REMOVED***;
-			var answer = ***REMOVED***
+		createAnswer : function(options) {
+			options = options || {};
+			var answer = {
 				text : options.text,
 				answered_by : options.answered_by,
 				answered_by_name : options.answered_by_name,
 				question_id : options.question_id,
-			***REMOVED***;
+			};
 			
-			var answeredByPoint = ***REMOVED***
+			var answeredByPoint = {
 				'type' : 'answer',
 				'details' : 'answered a question',
 				'user_id' : this.userId,
 				'count' : 5,
 				'created_time' : new Date(),
-			***REMOVED***;
+			};
 			
 			Points.insert(answeredByPoint);
 			
-				if(options.answered_by != options.question_creator) ***REMOVED***
+				if(options.answered_by != options.question_creator) {
 				
-				var questionCreatorPoint = ***REMOVED***
+				var questionCreatorPoint = {
 					'type' : 'question',
 					'details' : 'question generated answer',
 					'user_id' : options.question_creator,
 					'count' : 5,
 					'created_time' : new Date(),
-				***REMOVED***;
+				};
 				
 				Points.insert(questionCreatorPoint);
 				
-			***REMOVED***
+			}
 			
 			Answers.insert(answer);
-		***REMOVED***
+		}
 		
-	***REMOVED***);
+	});

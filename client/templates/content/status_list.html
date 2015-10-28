@@ -6,9 +6,9 @@
 					Status
 				</h5>
 				<div class = 'friend-box'>
-					***REMOVED******REMOVED***#each getPointsByUser***REMOVED******REMOVED***
-						***REMOVED******REMOVED***> status_item***REMOVED******REMOVED***
-					***REMOVED******REMOVED***/each***REMOVED******REMOVED***
+					{{#each getPointsByUser}}
+						{{> status_item}}
+					{{/each}}
 				</div>
 			</div>
 			<div class ='span10'>
