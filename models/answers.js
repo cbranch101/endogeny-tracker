@@ -12,6 +12,7 @@
 		},
 	});
 	
+	
 	Meteor.methods({
 		
 		createAnswer : function(options) {
